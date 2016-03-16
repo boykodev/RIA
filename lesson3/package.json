@@ -4,6 +4,7 @@
   "description": "Lesson3",
   "main": "index.js",
   "dependencies": {
+    "validator": "*",
     "querystring": "*"
   },
   "devDependencies": {},
