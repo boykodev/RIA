@@ -1,5 +1,8 @@
 module.exports = {
   "get": {
-    "/hello": require("./controllers/helloController").getAction
+    "/users": require("./controllers/UsersController").getAction
+  },
+  "post": {
+    "/users": require("./controllers/UsersController").postAction
   }
 };

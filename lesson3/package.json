@@ -1,27 +1,27 @@
 {
-  "name": "test",
+  "name": "lesson3",
   "version": "1.0.0",
-  "description": "Simple example",
+  "description": "Lesson3",
   "main": "index.js",
   "dependencies": {
-    "ect": "^0.5.9"
+    "querystring": "*"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ria-com/school-test-project-day3.git"
+    "url": "git+https://github.com/boykodev/RIA.git"
   },
   "keywords": [
     "node",
     "javascript"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Serge Boyko",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ria-com/school-test-project-day3/issues"
+    "url": "https://github.com/boykodev/RIA/issues"
   },
-  "homepage": "https://github.com/ria-com/school-test-project-day3"
+  "homepage": "https://github.com/ria-com/school-test-project-day3",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
