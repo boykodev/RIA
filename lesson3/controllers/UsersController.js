@@ -11,9 +11,9 @@ module.exports = {
 
             try {
                 if (users.get().length) {
-                    var responseText = "Користувачі:<br>" + JSON.stringify(users.get(), null, 2);
+                    var responseText = JSON.stringify(users.get(), null, 2);
                 } else {
-                    var responseText = 'Користувачів не знайдено =(';
+                    var responseText = 'Користувачів не знайдено';
                 }
                 response.write(responseText);
                 next();
@@ -24,7 +24,6 @@ module.exports = {
     },
     postAction: function (request, response, next) {
 
-        response.statusCode = 200;
         response.setHeader('Content-Type', 'text/html; charset=utf-8');
 
         var body = '';
@@ -41,12 +40,19 @@ module.exports = {
             // Отримуємо post дані
             var post = qs.parse(body);
 
-            if (users.add(post)['success']) {
+            if (users.add(post)['edit']) {
+                response.statusCode = 200;
+                response.write('Дані користувача змінені');
+                next();
+            }
+            else if (users.add(post)['success']) {
+                response.statusCode = 200;
                 response.write('Новий користувач доданий');
                 next();
             }
             else {
-                response.write('Невірна POST інформація');
+                response.statusCode = 400;
+                response.write('Bad request');
                 next();
             }
         });
