@@ -2,9 +2,11 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Minions clicker</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script data-main="js/main" src="lib/requirejs/require.js"></script>
     <script>
     	function increase(element) {
             element.innerText = Number(element.innerText) + 1;
@@ -14,7 +16,9 @@
 <body>
 
 <header>
-	<h1>Minions clicker</h1>
+	<h1>Minions clicker
+		<a href="#" class="reset"><span>reset</span></a>
+	</h1>
 </header>
 
 <ul class="gallery">
